@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Портфолио Асланяна Георгия - Frontend-разработчик">
+    <meta property="og:title" content="Портфолио - Асланян Георгий">
+    <meta property="og:description" content="Frontend-разработчик, создающий современные и динамичные web-приложения">
+    <meta property="og:image" content="./images/my image home.png">
+
+    <title>Портфолио - Асланян Георгий</title>
+
+    <!-- Основной фавикон -->
+    <link
+      rel="icon"
+      href="./images/favicon.ico"
+      type="image/ico"
+      loading="lazy"
+    />
+    <!-- Фавиконы для разных размеров -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="./images/favicon.ico"
+      loading="lazy"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="./images/favicon.ico"
+      loading="lazy"
+    />
+    <!-- Для устройств Apple -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon.ico"
+      loading="lazy"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--  scss -->
+    <link rel="stylesheet" href="./scss/styles.scss" />
+  </head>
+  <body>
+    <!-- header section starts -->
+    <header class="header">
+      <a href="#home" class="logo">Portfolio</a>
+
+      <i class="fa-solid fa-bars" id="menu-icon" onclick="toggleMenu()"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Главная</a>
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section design starts -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Всех приветствую!</h3>
+        <h1>Я Асланян Георгий</h1>
+        <h3>И я <span>Frontend-Разработчик</span></h3>
+        <p>
+          Как Frontend-разработчик, я создаю современные и динамичные
+          web-приложения и web-сайты, ориентированные на удобство пользователей
+          и высокую производительность. Моя специализация включает работу с
+          такими технологиями, как HTML, CSS, JavaScript, а также популярными
+          библиотеками и фреймворками, такими как React и Vue.js.
+        </p>
+        <div class="social-media">
+          <a
+            href="https://api.whatsapp.com/send?phone=79936774762&text=__________________________________ Давай сотрудничать!_________________________________"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://t.me/frontdevoloper" target="_blank">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="https://vk.com/id890936149" target="_blank">
+            <i class="fab fa-vk"></i>
+          </a>
+          <a href="https://github.com/Day-be18" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <button id="downloadPortfolio" class="btn">Скачать Портфолио</button>
+      </div>
+      <img
+        src="./images/my image home.png"
+        class="home-img"
+        alt="Упс!Что-то пошло не так."
+        loading="lazy"
+      />
+    </section>
+    <!-- home section design ends -->
+
+    <!-- about section design starts -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img
+          src="./images/my image about.png"
+          alt="Упс!Что то пошло не так."
+          loading="lazy"
+        />
+      </div>
+
+      <div class="about-content">
+        <h2 class="heading">Обо <span>мне</span></h2>
+        <h3>Я Frontend-Разработчик</h3>
+        <p>
+          Моя цель — создавать интуитивно понятные интерфейсы, которые не только
+          выглядят привлекательно, но и обеспечивают отличную пользовательскую
+          функциональность. Также активно занимаюсь улучшением
+          производительности web-сайтов и оптимизацией их работы для различных
+          устройств, будь то настольные компьютеры или мобильные устройства.
+        </p>
+      </div>
+    </section>
+    <!-- about section design ends -->
+
+    <!-- services section design starts -->
+    <section class="services" id="services">
+      <h2 class="heading">Мои <span>Услуги</span></h2>
+
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bx-paint"></i>
+          <h3>Работа с дизайном и графикой</h3>
+          <p>
+            Программист, работающий с дизайном, превращает визуальные макеты и
+            графику в код, сохраняя их эстетическую целостность.
+          </p>
+          <a href="#" class="btn">Посмотреть</a>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Создание веб-сайтов</h3>
+          <p>
+            Программист занимается разработкой и запуском веб-сайтов различного
+            уровня сложности — от лендингов до крупных веб-приложений.
+          </p>
+          <a href="#" class="btn">Посмотреть</a>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bx-line-chart"></i>
+          <h3>Digital-маркетинг</h3>
+          <p>
+            Программист разрабатывает автоматизацию, создает страницы,
+            настраивает аналитику и интегрирует рекламные платформы.
+          </p>
+          <a href="#" class="btn">Посмотреть</a>
+        </div>
+      </div>
+    </section>
+    <!-- services section design starts -->
+
+    <!-- portfolio section starts -->
+    <section class="potfolio" id="portfolio">
+      <h6 class="heading">Мои<span> Проекты</span></h6>
+
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img
+            src="./images/portfolio1.webp"
+            alt="Упс!Что то пошло не так."
+            loading="lazy"
+          />
+          <div class="portfolio-layer">
+            <h4>OnlyForFriends</h4>
+            <p>#игры, #лендинг, #адаптивная верстка.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img
+            src="./images/portfolio2.webp"
+            alt="Упс!Что то пошло не так."
+            loading="lazy"
+          />
+          <div class="portfolio-layer">
+            <h4>Travel</h4>
+            <p>#путешествия, #лендинг, #адаптивная верстка.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img
+            src="./images/portfolio3.webp"
+            alt="Упс!Что то пошло не так."
+            loading="lazy"
+          />
+          <div class="portfolio-layer">
+            <h4>Pharmacy</h4>
+            <p>#медицина, #сложный сайт, #адаптивная верстка.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img
+            src="./images/portfolio4.webp"
+            alt="Упс!Что то пошло не так."
+            loading="lazy"
+          />
+          <div class="portfolio-layer">
+            <h4>Auto</h4>
+            <p>#авто, #лендинг, #адаптивная верстка.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img
+            src="./images/portfolio5.webp"
+            alt="Упс!Что то пошло не так."
+            loading="lazy"
+          />
+          <div class="portfolio-layer">
+            <h4>House</h4>
+            <p>#дома, #сложный сайт, #адаптивная верстка.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img
+            src="./images/portfolio6.webp"
+            alt="Упс!Что то пошло не так."
+            loading="lazy"
+          />
+          <div class="portfolio-layer">
+            <h4>Jewelry</h4>
+            <p>#драгоценности, #лендинг, #адаптивная верстка.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio section ends -->
+
+    <!---- Footer --->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-block">
+          <h3>Главная</h3>
+          <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-block">
+          <h3>Обо мне</h3>
+          <ul>
+            <li><a href="#mission">Цели</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="#history">История</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-block">
+          <h3>Услуги</h3>
+          <ul>
+            <li><a href="#design">Веб-дизайн</a></li>
+            <li><a href="#development">Разработка</a></li>
+            <li><a href="#seo">SEO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-block">
+          <h3>Портфолио</h3>
+          <ul>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#clients">Клиенты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-block">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="mailto:example@example.com">Email</a></li>
+            <li><a href="tel:+79936774762">Телефон</a></li>
+            <li><a href="#address">Адрес</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- js link -->
+    <script src="./script.js" defer></script>
+  </body>
+</html>

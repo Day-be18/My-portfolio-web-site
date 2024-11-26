@@ -1,0 +1,28 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == "large" {
+      @media (max-width: 1200px) { @content; }
+    } @else if $breakpoint == "medium" {
+      @media (max-width: 768px) { @content; }
+    } @else if $breakpoint == "small" {
+      @media (max-width: 480px) { @content; }
+    }
+  }
+  
+  .header {
+    padding: 2rem;
+  
+    @include respond("medium") {
+      padding: 1rem;
+    }
+  
+    @include respond("small") {
+      padding: 0.5rem;
+    }
+  }
+
+  $main-color: #0ef;
+
+body {
+  background: $main-color;
+  font-family: "Poppins", sans-serif;
+}
