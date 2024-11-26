@@ -34,7 +34,7 @@ body {
 /* Задание фона и цвета текста для всей страницы */
 
 section {
-  padding: 9rem 9% 2rem;
+  padding: 8.2rem 9% 2rem;
 }
 /* Стиль для секций, чтобы каждая занимала не менее 100% высоты экрана и имела отступы */
 
@@ -105,7 +105,7 @@ section {
 /* Изменение размера изображения в домашней секции */
 
 .home-content h3 {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   font-weight: 700;
 }
 
@@ -118,7 +118,7 @@ span {
 }
 
 .home-content h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -387,7 +387,7 @@ span {
   }
 
   .portfolio-layer h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .portfolio-layer p {
@@ -403,7 +403,7 @@ span {
   }
 
   .portfolio-layer h4 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .portfolio-layer p {
