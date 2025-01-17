@@ -1,0 +1,1068 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+/* Импорт шрифтов Poppins и Nunito */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+/* Установка базовых стилей для всех элементов страницы */
+
+:root {
+  --bg-color-dim-gray: #1f242d;
+  --second-bg-color-gray: #323946;
+  --text-color-white: #fff;
+  --main-color-blue: #0ef;
+}
+/* Определение CSS-переменных для базовых цветов */
+
+html {
+  font-size: 62, 5%;
+  overflow-x: hidden;
+}
+/* Установка базового размера шрифта и отключение горизонтальной прокрутки */
+
+body {
+  background: var(--bg-color-dim-gray);
+  color: var(--text-color-white);
+}
+/* Задание фона и цвета текста для всей страницы */
+
+section {
+  padding: 7.2rem 9% 2rem;
+}
+/* Стиль для секций, чтобы каждая занимала не менее 100% высоты экрана и имела отступы */
+
+/* header section design starts */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.7rem 9%;
+  background: var(--bg-color-dim-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+/* Стиль для шапки (header): фиксированная позиция, фон и выравнивание содержимого */
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color-white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+/* Стиль для логотипа: размер шрифта, цвет и курсор при наведении */
+
+.logo:hover {
+  color: var(--main-color-blue);
+  transform: scale(1.05);
+  transition: color 0.1s, transform 0.3s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+.logo:hover i {
+  animation: bounce 1s;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color-white);
+  margin-left: 4rem;
+  transition: 0.3s;
+  scroll-behavior: smooth;
+}
+/* Стиль ссылок в навигационном меню: цвет, размер шрифта и отступы */
+
+.navbar a:hover {
+  font-size: xx-large;
+  color: var(--main-color-blue);
+}
+/* Изменение цвета ссылок при наведении и для активной ссылки */
+
+.navbar a i {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+.navbar a:hover i {
+  animation: bounce 1s;
+  transform: rotate(360deg) scale(1.2); /* Вращение и увеличение иконки */
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: var(--text-color-white);
+  display: none;
+}
+
+
+/* Стиль для иконки мобильного меню (бургер-меню): скрыто по умолчанию */
+/* header section design ends*/
+
+/* home section design starts*/
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Стиль для домашней секции: центрирование содержимого */
+
+.home-img {
+  animation: floatImage 4.9s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-1.6rem);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+/* Изменение размера изображения в домашней секции */
+
+.home-content h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+span {
+  color: var(--main-color-blue);
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+.home-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 1200px) {
+  /* Изменение размеров шрифтов и элементов для мобильных устройств */
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .navbar a {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+  .home-content img {
+    width: 60vw;
+    margin-bottom: 3rem;
+  }
+
+  .social-media a {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .about,
+  .services,
+  .portfolio-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .about-content .btn {
+    margin-left: 0;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-box {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Для планшетов */
+@media (max-width: 882px) {
+  /* Изменение размера шрифтов */
+  .logo {
+    font-size: 2rem;
+  }
+
+  .navbar a {
+    font-size: 1.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.4rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+  .home-img {
+    margin-top: 2rem;
+    width: 365px;
+    height: auto;
+    display: none;
+  }
+
+  .social-media a {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .about-content h2 {
+    font-size: 3.6rem;
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1.4rem;
+  }
+
+  .services-box {
+    padding: 2rem 1rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Для телефонов */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .navbar a {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+
+  .home-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .heading h2 {
+    font-size: 1rem;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+  }
+
+  .home-content img {
+    width: 70vw;
+  }
+
+  .about,
+  .services,
+  .portfolio-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* home section design  ends*/
+
+/* social-media section design  starts*/
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.7rem;
+  height: 3.7rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color-blue);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color-blue);
+  margin: 2.5rem 1rem 1rem 0.3rem;
+  transition: 0.5sec ease;
+}
+/* Стиль для иконок социальных сетей: размер, цвет и анимация при наведении */
+
+.social-media a:hover {
+  background: var(--main-color-blue);
+  color: #8a2be2;
+  box-shadow: 0 0 1rem var(--main-color-blue);
+}
+/* Анимация для иконок соцсетей при наведении */
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .social-media a {
+    width: 3rem; /* Уменьшение размера иконок */
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+
+  .social-media {
+    gap: 0.8rem; /* Уменьшение расстояния между иконками */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-media a {
+    width: 3.05rem; /* Еще меньше размер иконок */
+    height: 3.05rem;
+    font-size: 1.7rem;
+  }
+
+  .social-media {
+    gap: 0.5rem; /* Более плотное расположение иконок */
+    padding: 0.5rem; /* Уменьшение внутреннего отступа */
+  }
+}
+/* social-media section design ends*/
+
+/* btn style starts*/
+.btn {
+  display: inline-block; /* Устанавливаем блочно-строчный элемент для кнопки, чтобы можно было задавать размеры */
+  text-align: center;
+  padding: 2rem 2.6rem; /* Внутренние отступы: 1rem сверху/снизу и 2.8rem слева/справа */
+  background: var(
+    --main-color-blue
+  ); /* Устанавливаем цвет фона, взятый из переменной --main-color-blue */
+  color: indigo;
+  border-radius: 4rem; /* Скругляем углы кнопки до радиуса 4rem */
+  box-shadow: 0 0 1rem var(--main-color-blue); /* Добавляем тень кнопке того же цвета, что и фон */
+  letter-spacing: 0.1rem; /* Добавляем интервал между буквами */
+  font-size: 1.65rem;
+  font-weight: bolder; /* Устанавливаем полужирный вес шрифта */
+  transition: 0.5sec ease; /* Анимация всех изменений с плавным переходом за 0.5 секунды */
+  cursor: pointer;
+  margin-top: 1.7rem;
+}
+
+.btn:hover {
+  box-shadow: none; /* Убираем тень при наведении на кнопку */
+}
+
+@media (max-width: 480px) {
+  .btn{
+    padding: 1.5rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+/* btn style ends*/
+
+/* about section design starts */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: var(--second-bg-color-gray);
+}
+/* Стиль для секции "О нас": выравнивание элементов */
+
+/* Изменение размера изображения в секции "О нас" */
+
+.heading {
+  text-align: center; /* Выравнивание заголовка по центру */
+  font-size: 3rem; /* Размер шрифта заголовка */
+  margin-bottom: 2rem;
+}
+
+.about-content h2 {
+  line-height: 1.2; /* Межстрочный интервал для заголовка h2 */
+}
+
+.about-content h3 {
+  text-align: center; /* Выравнивание заголовка h3 по центру */
+  font-size: 2.6rem; /* Размер шрифта для заголовка h3 */
+}
+
+.about-content p {
+  font-size: 1.5rem; /* Размер шрифта абзаца */
+  margin: 2rem;/* Отступ сверху и снизу для абзаца */
+}
+
+.about-img {
+  animation: floatImage 4.9s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-1.6rem);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Вертикальное расположение элементов */
+    gap: 2rem;
+  }
+
+  .about-img img {
+    max-width: 300px; /* Уменьшение максимальной ширины изображения */
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem; /* Уменьшение размера заголовка */
+  }
+
+  .about-content h3 {
+    font-size: 2rem; /* Уменьшение размера подзаголовка */
+  }
+
+  .about-content p {
+    font-size: 1.5rem; /* Уменьшение размера текста */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 3rem; /* Уменьшение заголовка для маленьких экранов */
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 1.3rem;
+  }
+
+  .about-img img {
+    max-width: 250px; /* Еще большее уменьшение изображения */
+  }
+}
+/* about section design ends */
+
+/* services section design starts */
+.services h2 {
+  margin-bottom: 3rem;
+}
+/* Стиль для заголовка секции услуг */
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+/* Стиль для контейнера с услугами: центрирование и адаптивное распределение элементов */
+
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color-gray);
+  padding: 3rem 2rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color-dim-gray);
+  transform: 0.5s ease;
+}
+/* Стиль для карточек услуг: фон, отступы и закругление углов */
+
+.services-container .services-box:hover {
+  border-color: var(
+    --main-color-blue
+  ); /* Изменение цвета границы при наведении на элемент services-box */
+  transform: scale(
+    1.02
+  ); /* Увеличение элемента на 2% при наведении для эффекта приоритетности */
+}
+
+.services-box i {
+  font-size: 4rem; /* Размер шрифта иконки внутри блока services-box */
+  color: var(
+    --main-color-blue
+  ); /* Цвет иконки, установленный на основной синий цвет */
+  padding-bottom: 3rem;
+}
+
+.services-box h3 {
+  font-size: 2.4rem; /* Размер шрифта заголовка h3 внутри блока services-box */
+  margin-bottom: 1.1rem;
+}
+
+.services-box p {
+  font-size: 1.66rem; /* Размер шрифта абзаца внутри блока services-box */
+  margin: 0 3rem; /* Отступы сверху и снизу для абзаца */
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgb(90, 85, 85);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  color: var();
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+  color: var(--main-color-blue);
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease; /* Плавный переход */
+}
+
+.modal-content .close:hover {
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 1); /* Тень вокруг самого крестика */
+}
+/* services section design ends */
+
+/* portfolio section design starts*/
+/* Заголовок секции портфолио */
+.portfolio h2 {
+  background: var(--second-bg-color-gray);
+  margin-bottom: 4rem;
+}
+
+/* Контейнер портфолио */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  align-items: center;
+}
+
+/* Карточки портфолио */
+.portfolio-container .portfolio-box {
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--bg-color-dim-gray);
+  overflow: hidden;
+  display: flex;
+}
+
+/* Изображения в карточках */
+.portfolio-box img {
+  width: 100%; /* Ширина изображения ограничивается размером карточки */
+  height: 320px; /* Фиксированная высота */
+  object-fit: cover; /* Сохраняет пропорции, но обрезает лишнее */
+  transition: transform 0.5s ease;
+}
+
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+/* Слой с текстом в карточках */
+.portfolio-box .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.11), var(--main-color-blue));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 3rem;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  transform: translateY(0);
+}
+
+/* Заголовок слоя */
+.portfolio-layer h4 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Текст слоя */
+.portfolio-layer p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Ссылки в слое */
+.portfolio-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--text-color-white);
+  border-radius: 50%;
+}
+
+.portfolio-layer a i {
+  font-size: 1.5rem;
+  color: var(--second-bg-color-gray);
+}
+
+/* Адаптация под экраны 1250px */
+@media (max-width: 1250px) {
+  .portfolio-container {
+    gap: 15px;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 0.8rem;
+  }
+
+  .portfolio-box img{
+    height: auto;
+  }
+}
+
+/* Адаптация под экраны 882px */
+@media (max-width: 882px) {
+  .portfolio-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+
+  .portfolio-box {
+    border-radius: 8px;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 1.3rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 0.85rem;
+  }
+
+  .portfolio-box img{
+    height: auto;
+  }
+}
+
+/* Адаптация под экраны 480px */
+@media (max-width: 480px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 1.6rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-box img{
+    height: auto;
+  }
+}
+/* portfolio section design ends*/
+
+
+/* Contact section design start */
+
+/* Контейнер для секции контактов */
+.contact {
+  padding: 6.5rem 1rem;
+  background: var(--second-bg-color-gray);
+  text-align: center;
+}
+
+/* Заголовок */
+.contact .heading {
+  font-size: 3.7rem;
+  color: var(--main-color-blue);
+  margin-bottom: 1rem;
+}
+
+.contact .heading span {
+  color: var(--text-color-white);
+}
+
+/* Форма */
+.contact form {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Поля ввода */
+.contact .input-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.1rem;
+  font-size: 1.6rem;
+  color: var(--text-color-white);
+  background: var(--bg-color-dim-gray);
+  border: 1px solid var(--main-color-blue);
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+/* Поля ввода для больших экранов */
+.contact .input-box input {
+  flex: 1;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+/* Анимация при фокусе */
+.contact .input-box input:focus,
+.contact form textarea:focus {
+  border-color: var(--text-color-white);
+  box-shadow: 0 0 5px var(--main-color-blue);
+}
+
+/* Кнопка отправки */
+.contact .btn {
+  padding: 1rem 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: var(--main-color-blue);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.contact .btn:hover {
+  background: var(--text-color-white);
+  color: var(--main-color-blue);
+  transform: scale(1.05);
+}
+
+/* Убираем стрелки в поле input для всех браузеров */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appeearance: textfield;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .contact .input-box {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .heading {
+    font-size: 2.4rem;
+  }
+
+  .contact .btn {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Contact section design end */
+
+
+/* footer section design start*/
+/* Стиль для футера */
+.footer {
+  background: var(--second-bg-color-gray); /* Цвет фона */
+  color: var(--text-color-white); /* Цвет текста */
+  text-align: center; /* Центрирование текста */
+  padding: 2rem 1rem; /* Отступы сверху/снизу и по бокам */
+  font-size: 1.4rem; /* Размер текста */
+  margin-top: 2rem; /* Отступ сверху */
+  border-top: 0.1rem solid var(--bg-color-dim-gray); /* Разделительная линия */
+  display: flex; /* Используем flex для адаптивности */
+  justify-content: center; /* Центрирование содержимого */
+  align-items: center; /* Вертикальное выравнивание */
+  flex-wrap: wrap; /* Разрешаем перенос текста, если место ограничено */
+  line-height: 1.5; /* Межстрочный интервал для удобства чтения */
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 1.2rem; /* Уменьшение размера текста */
+    padding: 1.5rem 0.5rem; /* Уменьшение отступов */
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+  .footer {
+    font-size: 1rem; /* Еще больше уменьшение размера текста */
+    padding: 1rem 0.5rem; /* Компактные отступы */
+    line-height: 1.3; /* Уменьшение межстрочного интервала */
+  }
+}
+
+/* footer section design ends*/
+
+
+/* Адаптивность для меню */
+@media (max-width: 882px) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color-dim-gray);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Скрываем меню на мобильных устройствах */
+  }
+
+  .navbar a {
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  #menu-icon {
+    display: block; /* Показываем иконку бургера */
+    cursor: pointer;
+  }
+
+  .navbar.active {
+    display: flex; /* Показываем меню при нажатии на бургер */
+  }
+}
+
+@media (min-width: 882px) {
+  #menu-icon {
+    display: none; /* Скрываем бургер на больших экранах */
+  }
+}
+
+/* Стили для заглушки */
+.development-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100vw; /* Ширина на весь экран */
+  height: 100vh; /* Высота на весь экран */
+  padding: 2rem;
+  margin: 0; /* Убираем отступы */
+  box-sizing: border-box; /* Учитываем padding в размеры */
+}
+
+.development-content {
+  max-width: 50%;
+  color: var(--text-color-white);
+}
+
+.development-content h1 {
+  font-size: 3.5rem;
+  color: var(--main-color-blue);
+  margin-bottom: 1.5rem;
+}
+
+.development-content p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.development-image img {
+  max-width: 100%;
+  max-height: 910px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .development-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .development-content {
+    max-width: 90%;
+  }
+
+  .development-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .development-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  .development-image img {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .development-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .development-content h1 {
+    font-size: 2rem;
+  }
+
+  .development-content p {
+    font-size: 1.2rem;
+  }
+
+  .development-image img {
+    max-width: 100%;
+    max-height: 500px; /* Уменьшение высоты изображения */
+    height: auto; /* Сохранение пропорций */
+  }
+}
+
+/* Контейнер собаки */
+.dog-container {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+
+/* Собака: бег */
+.dog {
+  position: absolute;
+  width: 100px; /* Ширина одного кадра */
+  height: 100px; /* Высота одного кадра */
+  background: url('/Dog-sprite/dog-run.png') no-repeat;
+  background-size: 600px 100px; /* Общая ширина спрайта */
+}
