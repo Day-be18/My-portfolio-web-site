@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+*.log
+npm-debug.log*
+dist/
+build/
+.env
+package-lock*.json
+.idea/
+.vscode/
+__tests__/*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.sass-cache/
+coverage/
