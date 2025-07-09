@@ -72,8 +72,6 @@ const runAnimation = gsap.to(dog, {
   ease: "linear", // Равномерная скорость
 });
 
-// Инициализация EmailJS
-emailjs.init("5S2HOmeDRuZkQwCi1");
 
 const form = document.getElementById("contact-form");
 const button = document.querySelector(".btn");
@@ -92,7 +90,7 @@ form.addEventListener("submit", function (e) {
   // Установка состояния кнопки
   button.textContent = "Отправляется...";
   button.classList.add("sending");
-
+  
   // Отправка письма через EmailJS
   emailjs
     .send("service_7k6fsic", "template_rzyaa28", {
@@ -124,7 +122,7 @@ form.addEventListener("submit", function (e) {
         }, 1000);
       },
       function (error) {
-        console.log("FAILED...", error);
+        console.log("FAILED..+++", error);
         button.textContent = "Ошибка!";
         button.classList.remove("sending");
         button.classList.add("error");
